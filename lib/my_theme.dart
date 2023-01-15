@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyTheme{
   static final Color primaryColor=Color(0xFFB7935F);
-  static final Color secondaryColor=Color(0xFF242424);
+  static final Color secondaryColor=Color(0xFF1A0000);
   static ThemeData lightTheme=ThemeData(
     canvasColor: MyTheme.primaryColor,
       iconTheme: IconThemeData(color: Colors.black),

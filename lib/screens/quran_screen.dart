@@ -33,7 +33,7 @@ class quranScreen extends StatelessWidget {
               itemBuilder:(context, index) {
                 return suraNameBuilder(title: suraNames[index],index: index,);
               },
-              separatorBuilder: (context, index) => Container(margin: EdgeInsets.symmetric(horizontal: 80),height: 2,color: MyTheme.primaryColor,), itemCount: 114),
+              separatorBuilder: (context, index) => Container(margin: EdgeInsets.symmetric(horizontal: 120),height: 1,color: MyTheme.primaryColor,), itemCount: 114),
         )
       ],
     );
