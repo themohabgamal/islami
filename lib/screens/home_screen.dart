@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/my_theme.dart';
-import 'package:islami/screens/hadeth_screen.dart';
+import 'package:islami/screens/hadeth/hadeth_screen.dart';
 import 'package:islami/screens/quran_screen.dart';
 import 'package:islami/screens/radio_screen.dart';
 import 'package:islami/screens/sebha_screen.dart';
