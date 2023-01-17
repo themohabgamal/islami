@@ -11,6 +11,9 @@ class MyTheme{
         color: Colors.transparent,
         elevation: 0,
         centerTitle: true,
+        iconTheme: IconThemeData(
+          color: MyTheme.secondaryColor,
+        )
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedIconTheme:IconThemeData(color:MyTheme.secondaryColor,size: 36),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/my_theme.dart';
-import 'package:islami/sura_name_builder.dart';
+import 'package:islami/screens/sura_details/sura_name_builder.dart';
 
 class quranScreen extends StatelessWidget {
   static const String routeName="quran";
