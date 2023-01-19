@@ -15,10 +15,8 @@ suraNameBuilder({required this.title,required this.index});
       },
       child: Container(
         alignment: Alignment.center,
-        child: Text(title,style: TextStyle(fontWeight: FontWeight.bold,
-          fontSize: 24,
+        child: Text(title,style: Theme.of(context).textTheme.headline4
         ),),
-      ),
     );
   }
 }

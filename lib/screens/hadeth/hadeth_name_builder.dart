@@ -15,10 +15,8 @@ hadeth_name_builder({required this.title, required this.content});
       },
       child: Container(
         alignment: Alignment.center,
-        child: Text(title,style: TextStyle(fontWeight: FontWeight.bold,
-          fontSize: 24,
+        child: Text(title,style: Theme.of(context).textTheme.headline4
         ),),
-      ),
-    );
+      );
   }
 }

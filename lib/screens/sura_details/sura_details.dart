@@ -22,25 +22,21 @@ class _suraDetailsState extends State<suraDetails> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/background.png"),
+            image: AssetImage("assets/images/dark_background.png"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           title: Text("    سورة ${args.name!}",
-              style: TextStyle(
-                  fontSize: 38,
-                  color:MyTheme.secondaryColor,
-                  fontWeight: FontWeight.bold)),
-          centerTitle: true,
+              style: Theme.of(context).textTheme.headline4,),
         ),
         body: suraLine.isEmpty
             ? Center(
                 child: CircularProgressIndicator(),
               )
             : Card(
-              color: Colors.white,
+
               margin: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
               elevation: 12,
               shape: RoundedRectangleBorder(

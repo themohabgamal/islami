@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class suraText extends StatelessWidget {
 String text;
@@ -10,7 +11,7 @@ suraText({required this.text});
       alignment: Alignment.center,
 
       child: Text(text,
-      style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500,),textAlign: TextAlign.center,
+      style: Theme.of(context).textTheme.headline4,textAlign: TextAlign.center,
       ),
     );
   }
