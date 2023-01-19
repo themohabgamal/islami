@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:islami/my_theme.dart';
 import 'package:islami/screens/hadeth/hadeth_screen.dart';
-import 'package:islami/screens/quran_screen.dart';
+import 'package:islami/screens/providers/settingsProvider.dart';
+import 'package:islami/screens/sura_details/quran_screen.dart';
 import 'package:islami/screens/radio_screen.dart';
 import 'package:islami/screens/sebha_screen.dart';
+import 'package:islami/screens/settings/settings_screen.dart';
+import 'package:provider/provider.dart';
 
 class homeScreen extends StatefulWidget {
 static const String routeName="home";
@@ -17,14 +20,19 @@ class _homeScreenState extends State<homeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var sp=Provider.of<settingsProvider>(context);
     return Container(
       decoration: BoxDecoration(
-        image:DecorationImage(image: AssetImage("assets/images/background.png"),fit: BoxFit.fill),
+        image:DecorationImage(image: AssetImage(
+            sp.currentTheme==ThemeMode.light?
+            "assets/images/background.png"
+                : "assets/images/dark_background.png"
+        ),fit: BoxFit.fill),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text("islami",style: TextStyle(fontSize: 32,color: Colors.black,fontWeight: FontWeight.w500)),
+          title: Text("islami",style: Theme.of(context).textTheme.headline4),
           centerTitle: true,
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -34,11 +42,12 @@ class _homeScreenState extends State<homeScreen> {
             });
           },
           currentIndex: selectedIndex,
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/quran.png")),label: "quran"),
             BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/hadeth.png")),label: "hadeth"),
             BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/sebha.png")),label: "tasbeh"),
             BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/radio.png")),label: "radio"),
+            BottomNavigationBarItem(icon: Icon(Icons.settings),label: "settings"),
           ],
         ),
         body:screens[selectedIndex] ,
@@ -46,5 +55,5 @@ class _homeScreenState extends State<homeScreen> {
     );
   }
 
-  List<Widget>screens=[quranScreen(),hadethScreen(),sebhaScreen(),radioScreen()];
+  List<Widget>screens=[quranScreen(),hadethScreen(),sebhaScreen(),radioScreen(),settingsScreen()];
 }

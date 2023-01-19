@@ -18,13 +18,13 @@ class quranScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(
+        const Expanded(
             flex: 2,
             child: Image(image: AssetImage("assets/images/quran_header_image.png"))),
         Container(height: 2,color: MyTheme.primaryColor,),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: Text("Chapter name",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w500),),
+         Padding(
+          padding: EdgeInsets.symmetric(vertical: 8),
+          child: Text("Chapter name",style:Theme.of(context).textTheme.headline4),
         ),
         Container(height: 2,color: MyTheme.primaryColor,),
         Expanded(

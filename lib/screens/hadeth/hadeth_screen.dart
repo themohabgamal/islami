@@ -26,7 +26,7 @@ class _hadethScreenState extends State<hadethScreen> {
           Container(
               padding: EdgeInsets.symmetric(vertical: 8),
               child: Text("Ahadeth",
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
+                  style: Theme.of(context).textTheme.headline4,
                   textAlign: TextAlign.center)),
           Container(height: 2, color: MyTheme.primaryColor,),
           Expanded(

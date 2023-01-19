@@ -16,28 +16,24 @@ class hadethDetails extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/background.png"),
+            image: AssetImage("assets/images/dark_background.png"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           title: Text(args.title,
-              style: TextStyle(
-                  fontSize: 38,
-                  color: MyTheme.secondaryColor,
-                  fontWeight: FontWeight.bold)),
+              style: Theme.of(context).textTheme.headline4),
           centerTitle: true,
         ),
         body: Card(
-          color: Colors.white,
           margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
           elevation: 12,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
           child: Container(
-            child: Text(args.content,style: TextStyle(fontSize: 20),textAlign: TextAlign.center),
+            child: Text(args.content,style: Theme.of(context).textTheme.headline6,textAlign: TextAlign.center,),
           ),
           ),
         ),
