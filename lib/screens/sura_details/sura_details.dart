@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/my_theme.dart';
+import 'package:islami/screens/providers/settingsProvider.dart';
 import 'package:islami/screens/sura_details/sura_details_args.dart';
 import 'package:islami/screens/sura_details/sura_text.dart';
+import 'package:provider/provider.dart';
 
 class suraDetails extends StatefulWidget {
   static const String routeName = "suraDetails";
@@ -16,6 +18,7 @@ class _suraDetailsState extends State<suraDetails> {
 
   @override
   Widget build(BuildContext context) {
+    var sp=Provider.of<settingsProvider>(context);
     sura_details_args args =
         ModalRoute.of(context)?.settings.arguments as sura_details_args;
     if(suraLine.isEmpty)readFile(args.index!+1);
@@ -48,7 +51,7 @@ class _suraDetailsState extends State<suraDetails> {
                   },
                   separatorBuilder: (_, index) {
                     return Container(
-                      color: MyTheme.primaryColor,
+                      color: sp.currentTheme==ThemeMode.light? MyTheme.primaryColor:MyTheme.yellow,
                       height: 1,
                       margin: EdgeInsets.symmetric(horizontal: 120),
                     );

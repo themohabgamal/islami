@@ -7,7 +7,7 @@ import 'package:islami/screens/home_screen.dart';
 import 'package:islami/screens/providers/settingsProvider.dart';
 import 'package:islami/screens/sura_details/quran_screen.dart';
 import 'package:islami/screens/radio_screen.dart';
-import 'package:islami/screens/sebha_screen.dart';
+import 'package:islami/screens/sebha/sebha_screen.dart';
 import 'package:islami/screens/sura_details/sura_details.dart';
 import 'package:provider/provider.dart';
 import 'screens/providers/settingsProvider.dart';
