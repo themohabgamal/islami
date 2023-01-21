@@ -3,7 +3,7 @@ import 'package:islami/my_theme.dart';
 import 'package:islami/screens/providers/settingsProvider.dart';
 import 'package:islami/screens/sura_details/sura_name_builder.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class quranScreen extends StatelessWidget {
   static const String routeName = "quran";
   List<String> suraNames = [
@@ -138,7 +138,7 @@ class quranScreen extends StatelessWidget {
                 : MyTheme.yellow),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 8),
-          child: Text("Chapter name",
+          child: Text(AppLocalizations.of(context)!.chapter_name,
               style: Theme.of(context).textTheme.headline4),
         ),
         Container(
