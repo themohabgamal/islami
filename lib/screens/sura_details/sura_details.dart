@@ -25,7 +25,7 @@ class _suraDetailsState extends State<suraDetails> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/dark_background.png"),
+            image: sp.currentTheme==ThemeMode.dark? AssetImage("assets/images/dark_background.png"):AssetImage("assets/images/background.png"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(

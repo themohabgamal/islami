@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/main.dart';
 import 'package:islami/screens/providers/settingsProvider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class bottomSheetBuilder extends StatefulWidget {
   @override
@@ -38,10 +39,10 @@ child: Column(
 
   }
   Widget getSelectedItem(){
-    return Text("Light",style: Theme.of(context).textTheme.headline4);
+    return Text(AppLocalizations.of(context)!.light,style: Theme.of(context).textTheme.headline4);
 
   }
   Widget getUnselectedItem(){
-    return Text("Dark",style: Theme.of(context).textTheme.headline4,);
+    return Text(AppLocalizations.of(context)!.dark,style: Theme.of(context).textTheme.headline4,);
   }
 }

@@ -5,6 +5,7 @@ import 'package:islami/screens/hadeth/hadeth_details_args.dart';
 import 'package:islami/screens/hadeth/hadeth_name_builder.dart';
 import 'package:islami/screens/providers/settingsProvider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class hadethScreen extends StatefulWidget {
   static const String routeName = "hadeth";
 
@@ -28,7 +29,7 @@ class _hadethScreenState extends State<hadethScreen> {
           Container(height: 2, color: sp.currentTheme==ThemeMode.light? MyTheme.primaryColor:MyTheme.yellow,),
           Container(
               padding: EdgeInsets.symmetric(vertical: 8),
-              child: Text("Ahadeth",
+              child: Text(AppLocalizations.of(context)!.ahadeth,
                   style: Theme.of(context).textTheme.headline4,
                   textAlign: TextAlign.center)),
           Container(height: 2, color: sp.currentTheme==ThemeMode.light? MyTheme.primaryColor:MyTheme.yellow,),
